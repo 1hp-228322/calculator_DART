@@ -20,9 +20,9 @@ void main() {
   }
 
   if (parity == true){
-    stdout.write('Число является чётным ');
+    stdout.write('Число является чётным $parity ');
   }
   else{
-    stdout.write('Число является нечётным ');
+    stdout.write('Число является нечётным $parity ');
   }
 }
