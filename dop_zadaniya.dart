@@ -2,17 +2,17 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  // 1. Игра «Угадай число»
+
   guessNumberGame();
   
-  // 2. Калькулятор с историей
+
   calculatorWithHistory();
   
-  // 3. Анализатор текста
+
   textAnalyzer();
 }
 
-// 1. Игра «Угадай число»
+
 void guessNumberGame() {
   print("=== Угадай число ===");
   Random random = Random();
@@ -36,7 +36,7 @@ void guessNumberGame() {
   }
 }
 
-// 2. Калькулятор с историей
+
 void calculatorWithHistory() {
   print("\n=== Калькулятор ===");
   List<String> history = [];
@@ -69,24 +69,23 @@ void calculatorWithHistory() {
   }
 }
 
-// 3. Анализатор текста
 void textAnalyzer() {
   print("\n=== Анализатор текста ===");
   stdout.write("Введите текст: ");
   String text = stdin.readLineSync()!;
   
-  // Количество символов
+
   print("Символов: ${text.length}");
   
-  // Количество слов
+
   List<String> words = text.split(" ");
   print("Слов: ${words.length}");
   
-  // Количество предложений
+
   List<String> sentences = text.split(RegExp(r'[.!?]'));
   print("Предложений: ${sentences.length}");
   
-  // Частота слов
+
   Map<String, int> frequency = {};
   for (String word in words) {
     frequency[word] = (frequency[word] ?? 0) + 1;
